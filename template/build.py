@@ -16,13 +16,13 @@ def other_function():
 def other_function2(param):
 	print "other_function2 " + param
 
-@task(watched_sources = ['brick_wall_build', 'LICENSE.txt'])
+@task(watched_sources = ['scripts-util'])
 def test1(input_artifacts, output_artifact):
     run("echo test")
 
 
 
-@task(test1, watched_sources = ['README.md'])
+@task(test1, watched_sources = ['Dockerfile'])
 def test2(input_artifacts, output_artifact, param=''):
-    run("echo test2 param=" + param)
+    run("echo test2 param=" + param )
     other_function()
