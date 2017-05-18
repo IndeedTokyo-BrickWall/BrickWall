@@ -9,12 +9,12 @@ set_artifact_path("/usr/local/var/tst")
 
 
 def other_function():
-	print("other_function")
+	print "other_function"
 	other_function2("ere")
 
 
 def other_function2(param):
-	print("other_function2 " + param)
+	print "other_function2 " + param
 
 @task(watched_sources = ['scripts-util'])
 def test1(input_artifacts, output_artifact):
